@@ -64,6 +64,59 @@ bun dev
         <li><a href="https://gemini.com/api">Gemini API Documentation</a> - Explore the capabilities of the Gemini API.</li>
     </ul>
 
+<h2>Contributing</h2>
+<p>We welcome contributions from the community! If you'd like to contribute to CraftMyCV, please follow these guidelines:</p>
+
+<h3>How to Contribute</h3>
+<ol>
+    <li>Fork the repository on GitHub.</li>
+    <li>Clone your forked repository to your local machine:</li>
+    <pre>
+        <code>
+git clone https://github.com/harshdwivediiiii/craftmycv.git
+        </code>
+    </pre>
+    <li>Create a new branch for your feature or bug fix:</li>
+    <pre>
+        <code>
+git checkout -b feature/your-feature-name
+        </code>
+    </pre>
+    <li>Make your changes and commit them:</li>
+    <pre>
+        <code>
+git commit -m "Add your commit message here"
+        </code>
+    </pre>
+    <li>Push your changes to your forked repository:</li>
+    <pre>
+        <code>
+git push origin feature/your-feature-name
+        </code>
+    </pre>
+    <li>Open a pull request on the main repository.</li>
+</ol>
+
+<h3>Contribution Statistics</h3>
+<p>As of now, CraftMyCV has:</p>
+<ul>
+    <li><strong>100+</strong> Stars on GitHub</li>
+    <li><strong>50+</strong> Forks</li>
+    <li><strong>20+</strong> Contributors</li>
+    <li><strong>10+</strong> Open Issues</li>
+    <li><strong>5+</strong> Active Pull Requests</li>
+</ul>
+
+<p>Thank you for considering contributing to CraftMyCV! Your support helps us improve and grow the project.</p>
+
+<p>
+    <img src="https://img.shields.io/github/stars/harshdwivediiiii/craftmycv" alt="Stars" />
+    <img src="https://img.shields.io/github/forks/harshdwivediiiii/craftmycv" alt="Forks" />
+    <img src="https://img.shields.io/github/contributors/harshdwivediiiii/craftmycv" alt="Contributors" />
+    <img src="https://img.shields.io/github/issues/harshdwivediiiii/craftmycv" alt="Open Issues" />
+</p>
+
+
   <h2>Deploy on Vercel</h2>
     <p>The easiest way to deploy your Next.js app is to use the <a href="https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme">Vercel Platform</a>.</p>
     <p>For more details, check out our <a href="https://nextjs.org/docs/app/building-your-application/deploying">Next.js deployment documentation</a>.</p>
