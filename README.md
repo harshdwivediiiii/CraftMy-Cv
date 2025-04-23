@@ -1,13 +1,13 @@
 <h1>CraftMyCV - AI Resume Builder</h1>
 
-<p>Built with</p>
-  <p>
-    <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Drizzle_ORM-00C7B7?style=for-the-badge&logo=databricks&logoColor=white" alt="Drizzle ORM" />
-    <img src="https://img.shields.io/badge/Neon_DB-1E90FF?style=for-the-badge&logo=postgresql&logoColor=white" alt="Neon DB" />
-    <img src="https://img.shields.io/badge/Gemini_API-FFD700?style=for-the-badge&logo=google&logoColor=black" alt="Gemini API" />
-  </p>
+    <p>Built with</p>
+    <p>
+        <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
+        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+        <img src="https://img.shields.io/badge/Drizzle_ORM-00C7B7?style=for-the-badge&logo=databricks&logoColor=white" alt="Drizzle ORM" />
+        <img src="https://img.shields.io/badge/Neon_DB-1E90FF?style=for-the-badge&logo=postgresql&logoColor=white" alt="Neon DB" />
+        <img src="https://img.shields.io/badge/Gemini_API-FFD700?style=for-the-badge&logo=google&logoColor=black" alt="Gemini API" />
+    </p>
 
   <p>
         CraftMyCV is an AI-powered resume builder designed to help users create professional and tailored resumes effortlessly. Utilizing the Gemini API, Drizzle ORM, Neon Database, Next.js, and Tailwind CSS, this application provides a seamless user experience for job seekers.

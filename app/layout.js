@@ -1,9 +1,9 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
-import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ClientThemeProvider } from "@/components/ClientThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,28 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Craftmycv", // Customize your title here
-  description: "An AI SaAS for CV", // Update the description
+  title: "Craftmycv",
+  description: "An AI SaAS for CV",
+  icons: {
+    icon: [
+      { url: "/light-logo.png", media: "(prefers-color-scheme: light)" },
+      { url: "/dark-logo.png", media: "(prefers-color-scheme: dark)" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  suppressHydrationWarning>
-      <ClerkProvider
-      >
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <ThemeProvider attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          
+    <html lang="en" suppressHydrationWarning>
+      <ClerkProvider>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <ClientThemeProvider>
             <Navbar />
             {children}
-            </ThemeProvider>
-          
+          </ClientThemeProvider>
         </body>
       </ClerkProvider>
     </html>

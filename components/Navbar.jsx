@@ -7,8 +7,18 @@ import { usePathname, useRouter } from "next/navigation";
 import { Home, LayoutDashboard, User, History, Menu, X, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import * as Sheet from "@radix-ui/react-dialog";
+import { Input } from "@/components/ui/input";
 import { useTheme } from "next-themes";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"; // Correct import
 
 const ModeToggle = () => {
   const { setTheme, resolvedTheme } = useTheme();
@@ -35,9 +45,14 @@ const Navbar = () => {
   const { isSignedIn } = useUser();
   const path = usePathname();
   const router = useRouter();
-
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [search, setSearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const searchLower = search.toLowerCase();
@@ -61,17 +76,23 @@ const Navbar = () => {
     }
   }, [search]);
 
-  if (path.includes("aiform")) return null;
+  if (!mounted || path.includes("aiform")) return null;
 
   return (
     <div className="p-3 px-5 border-b shadow-sm bg-white dark:bg-black text-black dark:text-white">
       <div className="flex items-center justify-between gap-4">
-        <Link href="/">
-          <Image src="/logo.png" width={50} height={50} alt="CraftMyCV Logo" />
+        <Link href="/" className="shrink-0 rounded-full overflow-hidden hover:opacity-80 transition-opacity duration-300">
+          <Image
+            src={resolvedTheme === "dark" ? "/dark-logo.png" : "/light-logo.png"}
+            width={50}
+            height={50}
+            alt="CraftMyCV Logo"
+            className="rounded-full"
+          />
         </Link>
 
         <div className="relative flex-1 max-w-md">
-          <input
+          <Input
             type="text"
             placeholder="Search for pages..."
             value={search}
@@ -135,47 +156,58 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <Sheet.Root>
-            <Sheet.Trigger asChild>
-              <Button variant="ghost" size="icon" className="bg-black text-white">
-                <Menu />
+        <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="bg-white text-black dark:bg-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-950 transition">
+                <Menu size={20} className="text-black dark:text-white" />
               </Button>
-            </Sheet.Trigger>
-            <Sheet.Portal>
-              <Sheet.Overlay className="fixed inset-0 bg-black/50" />
-              <Sheet.Content className="fixed top-0 right-0 h-full w-[300px] bg-white dark:bg-black p-5 text-black dark:text-white shadow-lg z-50">
-                <Sheet.Title asChild>
-                  <h2 className="text-2xl font-bold mb-5">CraftMyCV</h2>
-                </Sheet.Title>
-                <nav className="flex flex-col gap-3">
-                  <Link href="/" className="flex items-center gap-3 p-3 rounded-lg bg-black hover:bg-gray-700 transition">
-                    <Home size={22} className="text-white" />
-                    <span className="text-lg font-medium">Homepage</span>
-                  </Link>
-                  <Link href="/history" className="flex items-center gap-3 p-3 rounded-lg bg-black hover:bg-gray-700 transition">
-                    <History size={22} className="text-white" />
-                    <span className="text-lg font-medium">Your History</span>
-                  </Link>
-                  <ModeToggle />
-                  {isSignedIn ? (
-                    <>
-                      <Link href="/dashboard" className="flex items-center gap-3 p-3 rounded-lg bg-black hover:bg-gray-700 transition">
-                        <LayoutDashboard size={22} className="text-white" />
-                        <span className="text-lg font-medium">Dashboard</span>
-                      </Link>
-                      <div className="mt-3">
-                        <UserButton />
-                      </div>
-                    </>
-                  ) : (
-                    <SignInButton>
-                      <Button className="mt-3 bg-gray-800 text-white">Get Started</Button>
-                    </SignInButton>
-                  )}
-                </nav>
-              </Sheet.Content>
-            </Sheet.Portal>
-          </Sheet.Root>
+            </SheetTrigger>
+            <SheetContent className="fixed top-0 right-0 h-full w-[300px] bg-white dark:bg-black p-5 text-black dark:text-white shadow-lg z-50">
+              <div className="flex items-center justify-between mb-5">
+                <Link href="/" className="shrink-0 rounded-full overflow-hidden hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src={resolvedTheme === "dark" ? "/dark-logo.png" : "/light-logo.png"}
+                    width={50}
+                    height={50}
+                    alt="CraftMyCV Logo"
+                    className="rounded-full"
+                  />
+                </Link>
+                <SheetClose asChild>
+                  <Button variant="ghost" size="icon" className="text-white">
+                    <X size={20} />
+                  </Button>
+                </SheetClose>
+              </div>
+              <SheetTitle className="text-2xl font-bold mb-5">CraftMyCV</SheetTitle>
+              <nav className="flex flex-col gap-3">
+                <Link href="/" className="flex items-center gap-3 p-3 rounded-lg dark:bg-black bg-white  hover:bg-gray-200 dark:hover:bg-gray-950 transition ">
+                  <Home size={22} className="text-black dark:text-white" />
+                  <span className="text-lg font-medium">Homepage</span>
+                </Link>
+                <Link href="/history" className="flex items-center gap-3 p-3 rounded-lg dark:bg-black bg-white  hover:bg-gray-200  dark:hover:bg-gray-950 transition">
+                  <History size={22} className="text-black dark:text-white " />
+                  <span className="text-lg font-medium">Your History</span>
+                </Link>
+                <ModeToggle />
+                {isSignedIn ? (
+                  <>
+                    <Link href="/dashboard" className="flex items-center gap-3 p-3 rounded-lg dark:bg-black bg-white  hover:bg-gray-200  dark:hover:bg-gray-950 transition">
+                      <LayoutDashboard size={22} className="text-black dark:text-white" />
+                      <span className="text-lg font-medium">Dashboard</span>
+                    </Link>
+                    <div className="flex justify-center  rounded-lg dark:bg-black bg-white  hover:bg-gray-200  dark:hover:bg-gray-950 transition">
+                      <UserButton />
+                    </div>
+                  </>
+                ) : (
+                  <SignInButton>
+                    <Button className="mt-3 bg-gray-800 text-white">Get Started</Button>
+                  </SignInButton>
+                )}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </div>
