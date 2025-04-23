@@ -1,5 +1,5 @@
 <h1>CraftMyCV - AI Resume Builder</h1>
-<img src="https://github.com/harshdwivediiiii/CraftMy-Cv/blob/main/public/dark-logo.png" alt="logo" />
+<img src="https://github.com/harshdwivediiiii/CraftMy-Cv/blob/main/public/dark-logo.png" alt="logo" width="20" height="20" />
 
 
 <p>Built with</p>
