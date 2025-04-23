@@ -1,6 +1,8 @@
 <h1>CraftMyCV - AI Resume Builder</h1>
+<img src="https://github.com/harshdwivediiiii/CraftMy-Cv/blob/main/public/dark-logo.png" alt="logo" />
 
-    <p>Built with</p>
+
+<p>Built with</p>
     <p>
         <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
         <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
