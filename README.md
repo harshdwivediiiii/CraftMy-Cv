@@ -110,10 +110,10 @@ git push origin feature/your-feature-name
 <p>Thank you for considering contributing to CraftMyCV! Your support helps us improve and grow the project.</p>
 
 <p>
-    <img src="https://img.shields.io/github/stars/harshdwivediiiii/craftmycv" alt="Stars" />
-    <img src="https://img.shields.io/github/forks/harshdwivediiiii/craftmycv" alt="Forks" />
-    <img src="https://img.shields.io/github/contributors/harshdwivediiiii/craftmycv" alt="Contributors" />
-    <img src="https://img.shields.io/github/issues/harshdwivediiiii/craftmycv" alt="Open Issues" />
+    <img src="https://img.shields.io/github/stars/harshdwivediiiii/CraftMy-Cv" alt="Stars" />
+    <img src="https://img.shields.io/github/forks/harshdwivediiiii/CraftMy-Cv" alt="Forks" />
+    <img src="https://img.shields.io/github/contributors/harshdwivediiiii/CraftMy-Cv" alt="Contributors" />
+    <img src="https://img.shields.io/github/issues/harshdwivediiiii/CraftMy-Cv" alt="Open Issues" />
 </p>
 
 
