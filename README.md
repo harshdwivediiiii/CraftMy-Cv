@@ -97,18 +97,6 @@ git push origin feature/your-feature-name
     <li>Open a pull request on the main repository.</li>
 </ol>
 
-<h3>Contribution Statistics</h3>
-<p>As of now, CraftMyCV has:</p>
-<ul>
-    <li><strong>100+</strong> Stars on GitHub</li>
-    <li><strong>50+</strong> Forks</li>
-    <li><strong>20+</strong> Contributors</li>
-    <li><strong>10+</strong> Open Issues</li>
-    <li><strong>5+</strong> Active Pull Requests</li>
-</ul>
-
-<p>Thank you for considering contributing to CraftMyCV! Your support helps us improve and grow the project.</p>
-
 <p>
     <img src="https://img.shields.io/github/stars/harshdwivediiiii/CraftMy-Cv" alt="Stars" />
     <img src="https://img.shields.io/github/forks/harshdwivediiiii/CraftMy-Cv" alt="Forks" />
